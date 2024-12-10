@@ -35,14 +35,14 @@ function Sidebar() {
       }
     >
       {/*Header*/}
-      <div className="p-4 flex items-center gap-2">
+      <div className="px-2 pt-4 flex items-center gap-2">
         <div className={"p-2 bg-neutral-800 text-white rounded-full"}>
           <SiOllama size={iconSize} />
         </div>
-        <p>MyLlama - Ollama Demo App</p>
+        <p>MyLlama - Ollama Demo</p>
       </div>
       {/*MENU*/}
-      <div className="p-4 flex justify-between">
+      <div className="p-2 flex justify-between">
         {/*CLOSE SIDE BAR*/}
         <div className="">
           <button className={"hover:bg-neutral-800 p-2 rounded"}>
@@ -80,7 +80,7 @@ function Sidebar() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-between w-full p-6 rounded">
+      <div className="flex items-center justify-between w-full px-2 pb-4 rounded">
         <p>Username</p>
         <button className={"hover:bg-neutral-800 p-2 rounded"}>
           <TbDoorExit size={iconSize} />
