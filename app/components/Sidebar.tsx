@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import { TbDoorExit } from "react-icons/tb";
 import { FiSearch, FiFilePlus, FiSidebar } from "react-icons/fi";
 import { SiOllama } from "react-icons/si";
 import { redirect } from "next/navigation";
+
 type ChatItem = {
   chatID: string;
   chatTitle: string;
@@ -60,7 +63,7 @@ function Sidebar() {
       {/*CHAT LIST*/}
       <div
         className="
-          flex-1 overflow-scroll overflow-x-hidden scroll-smooth  flex flex-col
+          flex-1 overflow-scroll overflow-x-hidden scroll-smooth flex flex-col
           [&::-webkit-scrollbar]:w-2
           [&::-webkit-scrollbar-track]:bg-gray-100
           [&::-webkit-scrollbar-thumb]:bg-gray-300
@@ -70,7 +73,8 @@ function Sidebar() {
         {chatList.map((chat: ChatItem) => (
           <div
             key={chat.chatID}
-            className={"rounded cursor-pointer hover:bg-neutral-800 p-2 m-2"}
+            className={"rounded cursor-pointer hover:bg-neutral-800 p-2 mx-2"}
+            onClick={() => handleChatClick(chat.chatID)}
           >
             <p>{chat.chatTitle}</p>
           </div>
